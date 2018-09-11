@@ -1,4 +1,4 @@
-#How to install a keystore on JKD
+# How to install a keystore on JKD
 1. Export your certified through firefox and save it with .cer extension.
 
 2. Go to JDK certificates directory. Example: 
@@ -20,46 +20,38 @@
      keytool -list -keystore cacerts
      ```
 
-
-
-#How to list all alias stored
-
+# How to list all alias stored
 You can run the following command to list the content of your keystore file (and alias name):
-
-```
-keytool -v -list -keystore .keystore
-```
+   ```
+   keytool -v -list -keystore .keystore
+   ```
 
 If you are looking for a specific alias, you can also specify it in the command:
-
-```
-keytool -list -keystore .keystore -alias foo
-```
+   ```
+   keytool -list -keystore .keystore -alias foo
+   ```
 
 If the alias is not found, it will display an exception:
+   ```   
+   keytool error: java.lang.Exception: Alias does not exist 
+   ```
 
-```   
-keytool error: java.lang.Exception: Alias does not exist 
-```
-
-
-
-#How to Remove Imported Certificates From Java Keystore
+# How to Remove Imported Certificates From Java Keystore
 
 If a problem occurred during the PatchPro installation, you might just remove the certificates and import them again.
    ```
     1. Become superuser.
-    
+
     2. Remove the previously imported certificates.
-    
+
     # keytool -delete -alias smicacert -keystore 
     /usr/j2se/jre/lib/security/cacerts
     Enter keystore password:  changeit
-    
+
     # keytool -delete -alias smirootcacert -keystore 
     /usr/j2se/jre/lib/security/cacerts
     Enter keystore password:  changeit
-    
+
     # keytool -delete -alias patchsigning -keystore 
     /usr/j2se/jre/lib/security/cacerts
     Enter keystore password:  changeit

@@ -44,15 +44,6 @@ If a problem occurred during the PatchPro installation, you might just remove th
 
     2. Remove the previously imported certificates.
 
-    # keytool -delete -alias smicacert -keystore 
-    /usr/j2se/jre/lib/security/cacerts
-    Enter keystore password:  changeit
-
-    # keytool -delete -alias smirootcacert -keystore 
-    /usr/j2se/jre/lib/security/cacerts
-    Enter keystore password:  changeit
-
-    # keytool -delete -alias patchsigning -keystore 
-    /usr/j2se/jre/lib/security/cacerts
+    # keytool -delete -alias your_cert -keystore cacerts
     Enter keystore password:  changeit
    ```

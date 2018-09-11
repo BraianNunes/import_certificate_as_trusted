@@ -1,4 +1,4 @@
-# How to install a keystore on JKD
+# Importing site certificate into Java Runtime certificate store
 1. Export your certified through firefox and save it with .cer extension.
 
 2. Go to JDK certificates directory. Example: 

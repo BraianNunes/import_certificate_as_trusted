@@ -23,12 +23,12 @@
 # How to list all alias stored
 You can run the following command to list the content of your keystore file (and alias name):
    ```
-   keytool -v -list -keystore .keystore
+   keytool -v -list -keystore cacerts
    ```
 
 If you are looking for a specific alias, you can also specify it in the command:
    ```
-   keytool -list -keystore .keystore -alias foo
+   keytool -list -keystore cacerts -alias foo
    ```
 
 If the alias is not found, it will display an exception:
